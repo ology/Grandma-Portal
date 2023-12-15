@@ -14,8 +14,9 @@ post '/' => sub ($c) {
   my $open = $c->param('open');
   if ($open) {
     my @cmd = ('open', '-a', $open);
-    exec @cmd;
+    system(@cmd) == 0 or die "Can't system(@cmd): $?";
   }
+  $c->redirect_to('index');
 } => 'action';
 
 app->log->level('info');
