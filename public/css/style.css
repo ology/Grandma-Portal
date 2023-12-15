@@ -1,0 +1,34 @@
+body {
+    background-image: url("/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+a:link, a:visited, a:hover, a:active, a:focus {
+    color: #414A4C;
+    text-decoration: none;
+}
+
+.toggle {
+    display: none
+}
+
+.padpage {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.faded {
+    opacity: 0.85;
+    background-color: lightcyan;
+}
+
+.smalltext {
+    font-size: small;
+    color: black;
+}
