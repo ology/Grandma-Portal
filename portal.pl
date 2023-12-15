@@ -5,12 +5,18 @@ use Capture::Tiny qw(capture);
 use Data::Dumper::Compact qw(ddc);
 
 get '/' => sub ($c) {
-  my $google = $c->param('google') // 0;
   $c->render(
     template => 'index',
-    google   => $google,
   );
 } => 'index';
+
+post '/' => sub ($c) {
+  my $open = $c->param('open');
+  if ($open) {
+    my @cmd = ('open', '-a', $open);
+    exec @cmd;
+  }
+} => 'action';
 
 app->log->level('info');
 
@@ -25,6 +31,11 @@ __DATA__
 <a href="https://mail.google.com/mail/u/0/#inbox" class="btn btn-lg btn-outline-dark" target="_blank"><i class="fa-solid fa-inbox"></i> Gmail</a>
 <a href="https://www.google.com/" class="btn btn-lg btn-outline-dark" target="_blank"><i class="fa-solid fa-magnifying-glass"></i> Google</a>
 <a href="https://family.ology.net/" class="btn btn-lg btn-outline-dark" target="_blank"><i class="fa-solid fa-people-group"></i> Family</a>
+<p></p>
+
+<form method="post">
+  <button type="submit" class="btn btn-lg btn-outline-dark" name="open" value="TextEdit"><i class="fa-solid fa-spinner"></i> Open</button>
+</form>
 
 @@ layouts/default.html.ep
 <!DOCTYPE html>
