@@ -22,9 +22,9 @@ __DATA__
 % layout 'default';
 % title 'Portal';
 
-<a href="https://mail.google.com/mail/u/0/#inbox" class="btn btn-outline-dark" target="_blank"><i class="fa fa-cogs"></i> Gmail</a>
-<a href="https://www.google.com/" class="btn btn-outline-dark" target="_blank"><i class="fa fa-cogs"></i> Google</a>
-<a href="https://family.ology.net/" class="btn btn-outline-dark" target="_blank"><i class="fa fa-cogs"></i> Family</a>
+<a href="https://mail.google.com/mail/u/0/#inbox" class="btn btn-lg btn-outline-dark" target="_blank"><i class="fa-solid fa-inbox"></i> Gmail</a>
+<a href="https://www.google.com/" class="btn btn-lg btn-outline-dark" target="_blank"><i class="fa-solid fa-magnifying-glass"></i> Google</a>
+<a href="https://family.ology.net/" class="btn btn-lg btn-outline-dark" target="_blank"><i class="fa-solid fa-people-group"></i> Family</a>
 
 @@ layouts/default.html.ep
 <!DOCTYPE html>
