@@ -2,7 +2,8 @@
 use Mojolicious::Lite -signatures;
 
 use Capture::Tiny qw(capture);
-use Data::Dumper::Compact qw(ddc);
+use File::HomeDir ();
+use List::Util ();
 
 get '/' => sub ($c) {
   $c->render(
@@ -12,8 +13,22 @@ get '/' => sub ($c) {
 
 post '/' => sub ($c) {
   my $open = $c->param('open');
+  my @folders = qw(Documents Music Pictures);
+  my $home = File::HomeDir->my_home;
   if ($open) {
-    my @cmd = ('open', $open);
+    my @cmd = ('open');
+    if (List::Util::any { $_ eq $open } @folders) {
+        my %dispatch = (
+            Documents => File::HomeDir->my_documents,
+            Music     => File::HomeDir->my_music,
+            Pictures  => File::HomeDir->my_pictures,
+        );
+        $open = $dispatch{$open};
+    }
+    else {
+        push @cmd, '-a';
+    }
+    push @cmd, $open;
     system(@cmd) == 0 or die "Can't system(@cmd): $?";
   }
   $c->redirect_to('index');
@@ -38,7 +53,7 @@ __DATA__
 
 <form method="post">
   <button type="submit" class="btn btn-lg btn-outline-dark" name="open" value="LibreOffice"><i class="fa-solid fa-paragraph"></i> LibreOffice</button>
-  <button type="submit" class="btn btn-lg btn-outline-dark" name="open" value="/Users/gene/Documents"><i class="fa-solid fa-folder-open"></i> Documents</button>
+  <button type="submit" class="btn btn-lg btn-outline-dark" name="open" value="Documents"><i class="fa-solid fa-folder-open"></i> Documents</button>
 </form>
 
 @@ layouts/default.html.ep
