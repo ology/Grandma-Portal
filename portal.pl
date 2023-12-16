@@ -44,10 +44,11 @@ __DATA__
 
 <a href="https://mail.google.com/mail/u/0/#inbox" class="<%= $class %>" target="_blank"><i class="fa-solid fa-inbox"></i> Gmail</a>
 <a href="https://www.google.com/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-magnifying-glass"></i> Google</a>
+<a href="https://www.facebook.com/groups/631391120534459/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-tree-city"></i> Fairview</a>
 <a href="https://family.ology.net/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-people-group"></i> Family</a>
 <a href="https://www.instacart.com/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-cart-shopping"></i> Instacart</a>
-<a href="https://www.wikipedia.org/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-book-atlas"></i> Wikipedia</a>
 <a href="https://news.google.com/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-newspaper"></i> News</a>
+<a href="https://www.wikipedia.org/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-book-atlas"></i> Wikipedia</a>
 <a href="https://weather.com/weather/today/l/39.59,-80.25" class="<%= $class %>" target="_blank"><i class="fa-solid fa-sun"></i> Weather</a>
 <p></p>
 
