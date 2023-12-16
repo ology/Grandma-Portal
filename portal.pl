@@ -64,9 +64,9 @@ __DATA__
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/css/fontawesome.css" rel="stylesheet">
     <link href="/css/solid.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <title><%= title %></title>
     <link href="/css/style.css" rel="stylesheet">
   </head>
