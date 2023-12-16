@@ -6,9 +6,7 @@ use File::HomeDir ();
 use List::Util ();
 
 get '/' => sub ($c) {
-  $c->render(
-    template => 'index',
-  );
+  $c->render(template => 'index');
 } => 'index';
 
 post '/' => sub ($c) {
