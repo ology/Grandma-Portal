@@ -54,6 +54,9 @@ __DATA__
 <form method="post">
   <button type="submit" class="btn btn-lg btn-outline-dark" name="open" value="LibreOffice"><i class="fa-solid fa-paragraph"></i> LibreOffice</button>
   <button type="submit" class="btn btn-lg btn-outline-dark" name="open" value="Documents"><i class="fa-solid fa-folder-open"></i> Documents</button>
+  <button type="submit" class="btn btn-lg btn-outline-dark" name="open" value="Music"><i class="fa-solid fa-music"></i> Music</button>
+  <button type="submit" class="btn btn-lg btn-outline-dark" name="open" value="Pictures"><i class="fa-solid fa-camera-retro"></i> Pictures</button>
+  <button type="submit" class="btn btn-lg btn-outline-dark" name="open" value="Solitare"><i class="fa-solid fa-diamond"></i> Solitare</button>
 </form>
 
 @@ layouts/default.html.ep
