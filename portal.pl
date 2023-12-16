@@ -57,7 +57,7 @@ __DATA__
 <p></p>
 
 <form method="post">
-  <button type="submit" class="<%= $class %>" name="open" value="LibreOffice"><i class="fa-solid fa-paragraph"></i> LibreOffice</button>
+  <button type="submit" class="<%= $class %>" name="open" value="LibreOffice"><i class="fa-solid fa-paragraph"></i> Office</button>
   <button type="submit" class="<%= $class %>" name="open" value="Solitare"><i class="fa-solid fa-diamond"></i> Solitare</button>
   <p></p>
   <button type="submit" class="<%= $class %>" name="open" value="Documents"><i class="fa-solid fa-file-lines"></i> Documents</button>
