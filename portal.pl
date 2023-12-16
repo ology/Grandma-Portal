@@ -10,9 +10,9 @@ get '/' => sub ($c) {
 
 post '/' => sub ($c) {
   my $open = $c->param('open');
-  my @folders = qw(Documents Music Pictures);
-  my $home = File::HomeDir->my_home;
   if ($open) {
+    my @folders = qw(Documents Music Pictures);
+    my $home = File::HomeDir->my_home;
     my @cmd = ('open');
     if (List::Util::any { $_ eq $open } @folders) {
         my %dispatch = (
