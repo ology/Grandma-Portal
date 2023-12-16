@@ -1,7 +1,6 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite -signatures;
 
-use Capture::Tiny qw(capture);
 use File::HomeDir ();
 use List::Util ();
 
