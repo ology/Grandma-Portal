@@ -25,7 +25,7 @@ post '/' => sub ($c) {
         push @cmd, '-a';
     }
     push @cmd, $open;
-    system(@cmd) == 0 or die "Can't system(@cmd): $?";
+    system(@cmd) == 0 or warn "Can't system(@cmd): $?";
   }
   $c->redirect_to('index');
 } => 'action';
