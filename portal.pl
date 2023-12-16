@@ -40,20 +40,22 @@ __DATA__
 % layout 'default';
 % title 'Portal';
 
-<a href="https://mail.google.com/mail/u/0/#inbox" class="btn btn-lg btn-outline-dark" target="_blank"><i class="fa-solid fa-inbox"></i> Gmail</a>
-<a href="https://www.google.com/" class="btn btn-lg btn-outline-dark" target="_blank"><i class="fa-solid fa-magnifying-glass"></i> Google</a>
-<a href="https://family.ology.net/" class="btn btn-lg btn-outline-dark" target="_blank"><i class="fa-solid fa-people-group"></i> Family</a>
-<a href="https://www.instacart.com/" class="btn btn-lg btn-outline-dark" target="_blank"><i class="fa-solid fa-cart-shopping"></i> Instacart</a>
-<a href="https://www.wikipedia.org/" class="btn btn-lg btn-outline-dark" target="_blank"><i class="fa-solid fa-book-atlas"></i> Wikipedia</a>
+% my $class = 'btn btn-outline-dark btn-lg';
+
+<a href="https://mail.google.com/mail/u/0/#inbox" class="<%= $class %>" target="_blank"><i class="fa-solid fa-inbox"></i> Gmail</a>
+<a href="https://www.google.com/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-magnifying-glass"></i> Google</a>
+<a href="https://family.ology.net/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-people-group"></i> Family</a>
+<a href="https://www.instacart.com/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-cart-shopping"></i> Instacart</a>
+<a href="https://www.wikipedia.org/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-book-atlas"></i> Wikipedia</a>
 <p></p>
 
 <form method="post">
-  <button type="submit" class="btn btn-lg btn-outline-dark" name="open" value="LibreOffice"><i class="fa-solid fa-paragraph"></i> LibreOffice</button>
-  <button type="submit" class="btn btn-lg btn-outline-dark" name="open" value="Solitare"><i class="fa-solid fa-diamond"></i> Solitare</button>
+  <button type="submit" class="<%= $class %>" name="open" value="LibreOffice"><i class="fa-solid fa-paragraph"></i> LibreOffice</button>
+  <button type="submit" class="<%= $class %>" name="open" value="Solitare"><i class="fa-solid fa-diamond"></i> Solitare</button>
   <p></p>
-  <button type="submit" class="btn btn-lg btn-outline-dark" name="open" value="Documents"><i class="fa-solid fa-file-lines"></i> Documents</button>
-  <button type="submit" class="btn btn-lg btn-outline-dark" name="open" value="Music"><i class="fa-solid fa-music"></i> Music</button>
-  <button type="submit" class="btn btn-lg btn-outline-dark" name="open" value="Pictures"><i class="fa-solid fa-camera-retro"></i> Pictures</button>
+  <button type="submit" class="<%= $class %>" name="open" value="Documents"><i class="fa-solid fa-file-lines"></i> Documents</button>
+  <button type="submit" class="<%= $class %>" name="open" value="Music"><i class="fa-solid fa-music"></i> Music</button>
+  <button type="submit" class="<%= $class %>" name="open" value="Pictures"><i class="fa-solid fa-camera-retro"></i> Pictures</button>
 </form>
 
 @@ layouts/default.html.ep
