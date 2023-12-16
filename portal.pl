@@ -14,15 +14,15 @@ post '/' => sub ($c) {
     my @folders = qw(Documents Music Pictures);
     my @cmd = ('open');
     if (List::Util::any { $_ eq $open } @folders) {
-        my %dispatch = (
-            Documents => File::HomeDir->my_documents,
-            Music     => File::HomeDir->my_music,
-            Pictures  => File::HomeDir->my_pictures,
-        );
-        $open = $dispatch{$open};
+      my %dispatch = (
+        Documents => File::HomeDir->my_documents,
+        Music     => File::HomeDir->my_music,
+        Pictures  => File::HomeDir->my_pictures,
+      );
+      $open = $dispatch{$open};
     }
     else {
-        push @cmd, '-a';
+      push @cmd, '-a';
     }
     push @cmd, $open;
     system(@cmd) == 0 or warn "Can't system(@cmd): $?";
