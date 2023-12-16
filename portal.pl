@@ -28,7 +28,7 @@ post '/' => sub ($c) {
     system(@cmd) == 0 or warn "Can't system(@cmd): $?";
   }
   $c->redirect_to('index');
-} => 'action';
+} => 'open';
 
 app->log->level('info');
 
