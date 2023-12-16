@@ -24,8 +24,8 @@ a:link, a:visited, a:hover, a:active, a:focus {
 }
 
 .faded {
-    opacity: 0.85;
-    background-color: lightcyan;
+    opacity: 0.80;
+    background-color: white;
 }
 
 .smalltext {
