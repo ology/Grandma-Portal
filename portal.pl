@@ -57,11 +57,11 @@ __DATA__
 <p></p>
 
 <form method="post">
-  <button type="submit" class="<%= $class %>" name="open" value="LibreOffice"><i class="fa-solid fa-paragraph"></i> Office</button>
-  <button type="submit" class="<%= $class %>" name="open" value="Solitare"><i class="fa-solid fa-diamond"></i> Solitare</button>
   <button type="submit" class="<%= $class %>" name="open" value="Documents"><i class="fa-solid fa-file-lines"></i> Documents</button>
   <button type="submit" class="<%= $class %>" name="open" value="Music"><i class="fa-solid fa-music"></i> Music</button>
+  <button type="submit" class="<%= $class %>" name="open" value="LibreOffice"><i class="fa-solid fa-paragraph"></i> Office</button>
   <button type="submit" class="<%= $class %>" name="open" value="Pictures"><i class="fa-solid fa-camera-retro"></i> Pictures</button>
+  <button type="submit" class="<%= $class %>" name="open" value="Solitare"><i class="fa-solid fa-diamond"></i> Solitare</button>
 </form>
 
 @@ layouts/default.html.ep
