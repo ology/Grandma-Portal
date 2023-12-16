@@ -47,6 +47,8 @@ __DATA__
 <a href="https://family.ology.net/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-people-group"></i> Family</a>
 <a href="https://www.instacart.com/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-cart-shopping"></i> Instacart</a>
 <a href="https://www.wikipedia.org/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-book-atlas"></i> Wikipedia</a>
+<a href="https://news.google.com/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-newspaper"></i> News</a>
+<a href="https://weather.com/weather/today/l/39.59,-80.25" class="<%= $class %>" target="_blank"><i class="fa-solid fa-sun"></i> Weather</a>
 <p></p>
 
 <form method="post">
