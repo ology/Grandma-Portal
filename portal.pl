@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite -signatures;
 
+use Capture::Tiny qw(capture);
 use File::HomeDir ();
 use List::Util ();
 
@@ -25,7 +26,9 @@ post '/' => sub ($c) {
       push @cmd, '-a';
     }
     push @cmd, $open;
-    system(@cmd) == 0 or warn "Can't system(@cmd): $?";
+    my ($stdout, $stderr, $exit) = capture { system(@cmd) };
+    #print "Output:\n$stdout\n";
+    warn "Error ($exit): \n$stderr\n" if $stderr;
   }
   $c->redirect_to('index');
 } => 'open';
