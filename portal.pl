@@ -23,9 +23,13 @@ post '/' => sub ($c) {
     my @cmd = $^O eq 'MSWin32' ? ('start') : $^O eq 'darwin' ? ('open') : ('xdg-open');
     if (List::Util::any { $_ eq $open } @folders) {
       my %dispatch = (
+        Data      => File::HomeDir->my_data,
+        Desktop   => File::HomeDir->my_desktop,
         Documents => File::HomeDir->my_documents,
         Music     => File::HomeDir->my_music,
         Pictures  => File::HomeDir->my_pictures,
+        Home      => File::HomeDir->my_home,
+        Videos    => File::HomeDir->my_videos,
       );
       $open = $dispatch{$open};
     }
