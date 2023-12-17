@@ -20,7 +20,7 @@ post '/' => sub ($c) {
   my $open = $c->param('open');
   if ($open) {
     my @folders = qw(Documents Music Pictures);
-    my @cmd = ('open');
+    my @cmd = $^O eq 'MSWin32' ? ('?') : $^O eq 'darwin' ? ('open') : ('xdg-open');
     if (List::Util::any { $_ eq $open } @folders) {
       my %dispatch = (
         Documents => File::HomeDir->my_documents,
@@ -30,7 +30,7 @@ post '/' => sub ($c) {
       $open = $dispatch{$open};
     }
     else {
-      push @cmd, '-a';
+      push @cmd, '-a' if $^O eq 'darwin';
     }
     push @cmd, $open;
     my ($stdout, $stderr, $exit) = capture { system(@cmd) };
