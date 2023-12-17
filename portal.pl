@@ -7,8 +7,6 @@ use Capture::Tiny qw(capture);
 use File::HomeDir ();
 use List::Util ();
 
-plugin 'NotYAMLConfig';
-
 get '/' => sub ($c) {
   my $who = getlogin || getpwuid($<);
   $who = 'default' unless -e "config/$who.yml";
