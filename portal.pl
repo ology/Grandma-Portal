@@ -21,14 +21,15 @@ post '/' => sub ($c) {
   my $open = $c->param('open');
   if ($open) {
     my @cmd = $^O eq 'MSWin32' ? ('start') : $^O eq 'darwin' ? ('open') : ('xdg-open');
+    my $home = File::HomeDir->my_home;
     my %dispatch = (
       Data      => File::HomeDir->my_data,
       Desktop   => File::HomeDir->my_desktop,
       Documents => File::HomeDir->my_documents,
-      Downloads => path(File::HomeDir->my_home, 'Downloads'),
+      Downloads => path($home, 'Downloads'),
       Music     => File::HomeDir->my_music,
       Pictures  => File::HomeDir->my_pictures,
-      Home      => File::HomeDir->my_home,
+      Home      => $home,
       Videos    => File::HomeDir->my_videos,
     );
     if (List::Util::any { $_ eq $open } keys %dispatch) {
