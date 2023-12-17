@@ -55,7 +55,8 @@ __DATA__
 <a
   href="<%= $link->{target} %>"
   class="btn btn-outline-dark btn-lg"
-  target="_blank"><i class="fa-solid <%= $link->{fa} %>"></i> <%= $link->{text} %></a>
+  target="_blank"
+><i class="fa-solid <%= $link->{fa} %>"></i> <%= $link->{text} %></a>
 % }
 <p></p>
 <form method="post">
@@ -64,7 +65,8 @@ __DATA__
     type="submit"
     class="btn btn-outline-dark btn-lg"
     name="open"
-    value="<%= $link->{target} %>"><i class="fa-solid <%= $link->{fa} %>"></i> <%= $link->{text} %></button>
+    value="<%= $link->{target} %>"
+  ><i class="fa-solid <%= $link->{fa} %>"></i> <%= $link->{text} %></button>
 % }
 </form>
 
