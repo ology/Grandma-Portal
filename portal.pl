@@ -8,7 +8,7 @@ use File::HomeDir ();
 use List::Util ();
 
 get '/' => sub ($c) {
-  my $who = getlogin || getpwuid($<) || '';
+  my $who = $c->param('who') || getlogin || getpwuid($<) || '';
   $who = 'default' unless -e "config/$who.yml";
   my $config = plugin NotYAMLConfig => { file => "config/$who.yml" };
   $c->render(
