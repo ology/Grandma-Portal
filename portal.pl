@@ -1,12 +1,23 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite -signatures;
 
+use Data::Dumper::Compact qw(ddc);
+
 use Capture::Tiny qw(capture);
 use File::HomeDir ();
 use List::Util ();
 
+plugin 'NotYAMLConfig';
+
 get '/' => sub ($c) {
-  $c->render(template => 'index');
+  my $who = getlogin || getpwuid($<);
+  $who = 'default' unless -e "config/$who.yml";
+  my $config = plugin NotYAMLConfig => { file => "config/$who.yml" };
+  $c->render(
+    template => 'index',
+    links    => $config->{links},
+    buttons  => $config->{buttons},
+  );
 } => 'index';
 
 post '/' => sub ($c) {
@@ -43,25 +54,15 @@ __DATA__
 % layout 'default';
 % title 'Portal';
 
-% my $class = 'btn btn-outline-dark btn-lg';
-
-<a href="https://mail.google.com/mail/u/0/#inbox" class="<%= $class %>" target="_blank"><i class="fa-solid fa-inbox"></i> Gmail</a>
-<a href="https://www.google.com/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-magnifying-glass"></i> Google</a>
-<a href="https://www.facebook.com/groups/631391120534459/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-tree-city"></i> Fairview</a>
-<a href="https://family.ology.net/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-people-group"></i> Family</a>
-<a href="https://www.instacart.com/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-cart-shopping"></i> Instacart</a>
-<a href="https://news.google.com/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-newspaper"></i> News</a>
-<a href="https://tunein.com/radio/home/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-radio"></i> Radio</a>
-<a href="https://weather.com/weather/today/l/39.59,-80.25" class="<%= $class %>" target="_blank"><i class="fa-solid fa-sun"></i> Weather</a>
-<a href="https://www.wikipedia.org/" class="<%= $class %>" target="_blank"><i class="fa-solid fa-book-atlas"></i> Wikipedia</a>
+% for my $link (@$links) {
+<a href="<%= $link->{target} %>" class="btn btn-outline-dark btn-lg" target="_blank"><i class="fa-solid <%= $link->{fa} %>"></i> <%= $link->{text} %></a>
+% }
 <p></p>
 
 <form method="post">
-  <button type="submit" class="<%= $class %>" name="open" value="Documents"><i class="fa-solid fa-file-lines"></i> Documents</button>
-  <button type="submit" class="<%= $class %>" name="open" value="Music"><i class="fa-solid fa-music"></i> Music</button>
-  <button type="submit" class="<%= $class %>" name="open" value="LibreOffice"><i class="fa-solid fa-paragraph"></i> Office</button>
-  <button type="submit" class="<%= $class %>" name="open" value="Pictures"><i class="fa-solid fa-camera-retro"></i> Pictures</button>
-  <button type="submit" class="<%= $class %>" name="open" value="Solitare"><i class="fa-solid fa-diamond"></i> Solitare</button>
+% for my $link (@$buttons) {
+  <button type="submit" class="btn btn-outline-dark btn-lg" name="open" value="<%= $link->{target} %>"><i class="fa-solid <%= $link->{fa} %>"></i> <%= $link->{text} %></button>
+% }
 </form>
 
 @@ layouts/default.html.ep
