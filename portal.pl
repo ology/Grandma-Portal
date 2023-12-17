@@ -52,12 +52,19 @@ __DATA__
 % layout 'default';
 % title 'Portal';
 % for my $link (@$links) {
-<a href="<%= $link->{target} %>" class="btn btn-outline-dark btn-lg" target="_blank"><i class="fa-solid <%= $link->{fa} %>"></i> <%= $link->{text} %></a>
+<a
+  href="<%= $link->{target} %>"
+  class="btn btn-outline-dark btn-lg"
+  target="_blank"><i class="fa-solid <%= $link->{fa} %>"></i> <%= $link->{text} %></a>
 % }
 <p></p>
 <form method="post">
 % for my $link (@$buttons) {
-  <button type="submit" class="btn btn-outline-dark btn-lg" name="open" value="<%= $link->{target} %>"><i class="fa-solid <%= $link->{fa} %>"></i> <%= $link->{text} %></button>
+  <button
+    type="submit"
+    class="btn btn-outline-dark btn-lg"
+    name="open"
+    value="<%= $link->{target} %>"><i class="fa-solid <%= $link->{fa} %>"></i> <%= $link->{text} %></button>
 % }
 </form>
 
