@@ -4,6 +4,7 @@ use Mojolicious::Lite -signatures;
 use Capture::Tiny qw(capture);
 use File::HomeDir ();
 use List::Util ();
+use Path::Tiny qw(path);
 
 get '/' => sub ($c) {
   my $who = $c->param('who') || getlogin || getpwuid($<) || '';
@@ -24,6 +25,7 @@ post '/' => sub ($c) {
       Data      => File::HomeDir->my_data,
       Desktop   => File::HomeDir->my_desktop,
       Documents => File::HomeDir->my_documents,
+      Downloads => path(File::HomeDir->my_home, 'Downloads'),
       Music     => File::HomeDir->my_music,
       Pictures  => File::HomeDir->my_pictures,
       Home      => File::HomeDir->my_home,
