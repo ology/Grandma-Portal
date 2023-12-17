@@ -19,18 +19,17 @@ get '/' => sub ($c) {
 post '/' => sub ($c) {
   my $open = $c->param('open');
   if ($open) {
-    my @folders = qw(Documents Music Pictures);
     my @cmd = $^O eq 'MSWin32' ? ('start') : $^O eq 'darwin' ? ('open') : ('xdg-open');
-    if (List::Util::any { $_ eq $open } @folders) {
-      my %dispatch = (
-        Data      => File::HomeDir->my_data,
-        Desktop   => File::HomeDir->my_desktop,
-        Documents => File::HomeDir->my_documents,
-        Music     => File::HomeDir->my_music,
-        Pictures  => File::HomeDir->my_pictures,
-        Home      => File::HomeDir->my_home,
-        Videos    => File::HomeDir->my_videos,
-      );
+    my %dispatch = (
+      Data      => File::HomeDir->my_data,
+      Desktop   => File::HomeDir->my_desktop,
+      Documents => File::HomeDir->my_documents,
+      Music     => File::HomeDir->my_music,
+      Pictures  => File::HomeDir->my_pictures,
+      Home      => File::HomeDir->my_home,
+      Videos    => File::HomeDir->my_videos,
+    );
+    if (List::Util::any { $_ eq $open } keys %dispatch) {
       $open = $dispatch{$open};
     }
     else {
