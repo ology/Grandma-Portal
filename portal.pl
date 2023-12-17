@@ -52,7 +52,7 @@ __DATA__
 % for my $link (@$links) {
 <a
   href="<%= $link->{target} %>"
-  class="btn btn-outline-dark btn-lg"
+  class="btn btn-outline-info btn-lg link-dark"
   target="_blank"
 ><i class="fa-solid <%= $link->{fa} %>"></i> <%= $link->{text} %></a>
 % }
@@ -61,7 +61,7 @@ __DATA__
 % for my $link (@$buttons) {
   <button
     type="submit"
-    class="btn btn-outline-dark btn-lg"
+    class="btn btn-outline-info btn-lg link-dark"
     name="open"
     value="<%= $link->{target} %>"
   ><i class="fa-solid <%= $link->{fa} %>"></i> <%= $link->{text} %></button>
