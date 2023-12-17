@@ -1,8 +1,6 @@
 #!/usr/bin/env perl
 use Mojolicious::Lite -signatures;
 
-use Data::Dumper::Compact qw(ddc);
-
 use Capture::Tiny qw(capture);
 use File::HomeDir ();
 use List::Util ();
