@@ -35,8 +35,10 @@ post '/' => sub ($c) {
       $open = $dispatch{$open};
     }
     else {
-      push @cmd, '-a' if $^O eq 'darwin';
-      if ($^O eq 'MSWin32') {
+      if ($^O eq 'darwin') {
+        push @cmd, '-a';
+      }
+      elsif ($^O eq 'MSWin32') {
         @cmd = qw(PowerShell -Command);
         my @parts = split /\\/, $open;
         my $exe = path('C:\Program Files', @parts, $parts[-1] . '.exe');
