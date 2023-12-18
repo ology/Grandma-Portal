@@ -42,7 +42,8 @@ post '/' => sub ($c) {
       elsif ($^O eq 'MSWin32') {
         @cmd = qw(PowerShell -Command);
         my @parts = split /\\/, $open;
-        my $exe = path('C:\Program Files', @parts, '.exe');
+        my $program = pop @parts;
+        my $exe = path('C:\Program Files', @parts, "$program.exe");
         $open = qq/"& start {$exe}"/;
       }
     }
