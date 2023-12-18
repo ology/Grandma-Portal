@@ -9,7 +9,8 @@ For Windows:
 3. Start the Strawberry Perl command terminal window, and then:
 4. `git clone https://github.com/ology/Grandma-Portal.git`
 5. `cd Grandma-Portal`
-6. Copy and tweak the `config/default.yml` file, named for your grandma's Windows username, instead of "default".
+6. Copy the `config/default.yml` file, and name it for your grandma's Windows username, instead of "default".
+7. Tweak the targets therein, to have her common actions, and then save the file.
 7. `perl make-exe.pl`
 8. Add run-portal.exe to your grandma's scheduled startup tasks.
 9. Reboot her machine...
