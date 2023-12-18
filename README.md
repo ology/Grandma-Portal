@@ -26,7 +26,7 @@ It is assumed to live under `Program Files`. So for good ol' Win7 Solitaire inst
 the `config/your_grandma.yml` would have this buttons entry:
 
     buttons:
-      - text: 'Solitare'
+      - text: 'Solitaire'
         fa: 'fa-diamond'
-        target: 'Microsoft Games\Solitare\Solitare'
+        target: 'Microsoft Games\Solitaire\Solitaire'
 
