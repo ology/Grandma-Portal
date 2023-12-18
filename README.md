@@ -30,3 +30,5 @@ the `config/your_grandma.yml` would have this buttons entry:
         fa: 'fa-diamond'
         target: 'Microsoft Games\Solitaire\Solitaire'
 
+The "fa" entry is for a [fontawesome](https://fontawesome.com/search?q=download&o=a&m=free&s=solid) solid icon.
+
