@@ -4,9 +4,9 @@ Super simple links and launcher buttons and nothing else
 
 For Windows:
 
-1. Have https://strawberryperl.com/ on your grandma's computer.
-2. Have https://git-scm.com/download/win (or some variant) too.
-3. Start the Strawberry Perl command terminal window, and then:
+1. Install https://strawberryperl.com/ on your grandma's computer.
+2. Install https://git-scm.com/download/win (or some variant) too.
+3. Start the Strawberry Perl command line terminal, and then:
 4. `git clone https://github.com/ology/Grandma-Portal.git`
 5. `cd Grandma-Portal`
 6. Copy the `config/default.yml` file, and name it for your grandma's Windows username, instead of "default".
