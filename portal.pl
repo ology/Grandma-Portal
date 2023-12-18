@@ -43,7 +43,7 @@ post '/' => sub ($c) {
         @cmd = qw(PowerShell -Command);
         my @parts = split /\\/, $open;
         my $program = pop @parts;
-        my $exe = path('C:\Program Files', @parts, "$program.exe");
+        my $exe = path('C:\Program Files', @parts, "$program.exe")->canonpath;
         $open = qq/"& start {$exe}"/;
       }
     }
