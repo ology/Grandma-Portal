@@ -18,7 +18,7 @@ For Windows:
 
 *** To launch a Windows EXE, use the path to the program you want to run.
 
-It is assumed to live under `Program Files`. So for good ol' [Win7 Solitaire](https://win7games.com/) installed at,
+This path is assumed to be under `Program Files`. So for good ol' [Win7 Solitaire](https://win7games.com/) installed at,
 
 `C:\Program Files\Microsoft Games\Solitaire\Solitaire.exe`
 
