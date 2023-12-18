@@ -57,7 +57,7 @@ post '/' => sub ($c) {
     push @cmd, $open;
     my ($stdout, $stderr, $exit) = capture { system(@cmd) };
     #print "Output:\n$stdout\n";
-    warn "Error ($exit): \n$stderr\n" if $stderr;
+    warn "Error ($exit):\n$stderr\n" if $stderr;
   }
   $c->redirect_to('index');
 } => 'open';
