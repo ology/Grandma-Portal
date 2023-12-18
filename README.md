@@ -21,7 +21,7 @@ For Windows:
 
 It is assumed to live under `Program Files`. So for good ol' [Win7 Solitaire](https://win7games.com/) installed at,
 
-   C:\Program Files\Microsoft Games\Solitaire\Solitaire.exe
+`C:\Program Files\Microsoft Games\Solitaire\Solitaire.exe`
 
 the `config/your_grandma.yml` would have this buttons entry:
 
