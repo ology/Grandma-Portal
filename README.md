@@ -28,5 +28,5 @@ the `config/your_grandma.yml` would have this buttons entry:
     buttons:
       - text: 'Solitare'
         fa: 'fa-diamond'
-        target: 'Microsoft Games\Solitare'
+        target: 'Microsoft Games\Solitare\Solitare'
 
