@@ -12,5 +12,5 @@ For Windows:
 6. Copy and tweak the `config/default.yml` file, named for your Windows username, instead of "default".
 7. Add run-portal.exe to your scheduled startup tasks.
 8. Reboot...
-9. Browse to http://192.168.0.100:3000/
+9. Browse to http://127.0.0.0:3000/
 10. Voila!
