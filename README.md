@@ -9,5 +9,7 @@ For Windows:
     3. `git clone https://github.com/ology/Grandma-Portal.git`
     4. `cd Grandma-Portal`
     5. `perl make-exe.pl`
-    6. Add run-portal.exe to your scheduled startup tasks.
-    7. Voila!
+    6. Copy and tweak the `config/default.yml` file, named for your Windows username, instead of "default".
+    7. Add run-portal.exe to your scheduled startup tasks.
+    8. Reboot...
+    9. Voila!
