@@ -8,7 +8,10 @@ use Path::Tiny qw(path);
 
 get '/' => sub ($c) {
   my $who = $c->param('who') || getlogin || getpwuid($<) || '';
-  $who = 'default' unless -e "config/$who.yml";
+  unless (-e "config/$who.yml") {
+    warn "No config file for $who\n";
+    $who = 'default';
+  }
   my $config = plugin NotYAMLConfig => { file => "config/$who.yml" };
   $c->render(
     template => 'index',
