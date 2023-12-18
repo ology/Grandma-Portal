@@ -2,4 +2,12 @@
 
 Super simple links and launcher buttons and nothing else
 
-`perl portal.pl daemon`
+For Windows:
+
+    1. Have https://strawberryperl.com/
+    2. Have https://git-scm.com/download/win (or some variant)
+    3. `git clone https://github.com/ology/Grandma-Portal.git`
+    4. `cd Grandma-Portal`
+    5. `perl make-exe.pl`
+    6. Add run-portal.exe to your scheduled startup tasks.
+    7. Voila!
