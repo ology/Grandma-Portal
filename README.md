@@ -13,7 +13,7 @@ For Windows:
 7. Tweak the targets therein, to have her common actions, and then save the file. ***
 8. Add your `perl.exe` with `run-portal.pl` as argument, to your grandma's scheduled startup tasks.
 9. Reboot her machine...
-10. Browse to http://127.0.0.0:3000/
+10. Browse to http://127.0.0.1:3000/
 11. Voila!
 
 *** To launch a Windows EXE, use the path to the program you want to run.
