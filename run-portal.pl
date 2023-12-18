@@ -8,6 +8,6 @@ use File::Which qw(which);
 my $perl = which('perl');
 my $path = abs_path('portal.pl');
 
-my @cmd = ('start', $perl, $path, 'daemon');
+my @cmd = ('start', '/min', $perl, $path, 'daemon');
 
 system(@cmd) == 0 or die "system(@cmd) failed: $?";
