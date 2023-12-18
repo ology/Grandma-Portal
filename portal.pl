@@ -1,4 +1,8 @@
 #!/usr/bin/env perl
+
+# nb: This is the Grandma-Portal app itself.
+# Use the run-portal.pl wrapper to launch with Windows.
+
 use Mojolicious::Lite -signatures;
 
 use Capture::Tiny qw(capture);
