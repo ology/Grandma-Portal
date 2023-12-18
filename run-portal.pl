@@ -1,4 +1,7 @@
 #!/usr/bin/env perl
+
+# nb: This is the wrapper that launches the portal
+
 use strict;
 use warnings;
 
