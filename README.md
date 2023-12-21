@@ -4,6 +4,7 @@ Super simple links and launcher buttons and nothing else
 
 For Windows:
 
+0. Have https://www.mozilla.org/en-US/firefox/new/ ubstalled.
 1. Install https://strawberryperl.com/ on your grandma's computer.
 2. Install https://git-scm.com/download/win (or some variant) too.
 3. Start the Strawberry Perl command line terminal, and then:
@@ -12,11 +13,9 @@ For Windows:
 6. Copy the `config/default.yml` file, and name it for your grandma's Windows username, instead of "default".
 7. Tweak the targets therein, to have her common actions, and then save the file. ***
 8. Then either:
-    - Add your `perl.exe` with `run-portal.pl` as argument, to your grandma's scheduled startup tasks.
+    - Add your `perl.exe` with `run-portal.pl` as argument, to your grandma's scheduled startup tasks and reboot her machine.
     - Or run `perl make-exe.pl` and generate an EXE program to run at will.
-9. Reboot her machine or run the EXE
-10. Browse to http://127.0.0.1:3000/
-11. Voila!
+9. Voila!
 
 *** To launch a Windows EXE, use the path to the program you want to run.
 
