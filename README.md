@@ -11,8 +11,10 @@ For Windows:
 5. `cd Grandma-Portal`
 6. Copy the `config/default.yml` file, and name it for your grandma's Windows username, instead of "default".
 7. Tweak the targets therein, to have her common actions, and then save the file. ***
-8. Add your `perl.exe` with `run-portal.pl` as argument, to your grandma's scheduled startup tasks.
-9. Reboot her machine...
+8. Then either:
+    - Add your `perl.exe` with `run-portal.pl` as argument, to your grandma's scheduled startup tasks.
+    - Or run `perl make-exe.pl` and generate an EXE program to run at will.
+9. Reboot her machine or run the EXE
 10. Browse to http://127.0.0.1:3000/
 11. Voila!
 
