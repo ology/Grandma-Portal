@@ -17,7 +17,7 @@ For Windows:
     - Or run `perl make-exe.pl` and generate an EXE program to run at will.
 9. Voila!
 
-*** To launch a Windows EXE, use the path to the program you want to run.
+*** To launch a Windows EXE from the portal app, use the path to the program you want to run:
 
 This path is assumed to be under `C:\Program Files`. So for good ol' [Win7 Solitaire](https://win7games.com/) installed at,
 
