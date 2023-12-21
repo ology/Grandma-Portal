@@ -4,7 +4,7 @@ Super simple links and launcher buttons and nothing else
 
 For Windows:
 
-0. Have https://www.mozilla.org/en-US/firefox/new/ ubstalled.
+0. Have https://www.mozilla.org/en-US/firefox/new/ installed.
 1. Install https://strawberryperl.com/ on your grandma's computer.
 2. Install https://git-scm.com/download/win (or some variant) too.
 3. Start the Strawberry Perl command line terminal, and then:
